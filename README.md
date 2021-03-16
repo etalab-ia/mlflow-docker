@@ -1,6 +1,6 @@
 
 
-## **This repo is heavily based on [this](https://github.com/soundsensing/mlflow-easyauth) repo.**
+# **This repo is heavily based on [this](https://github.com/soundsensing/mlflow-easyauth) repo.**
 
 The main difference is that this Docker image does not includes a `nginx` container, because it is assumed that `nginx` is running on the host machine. Still the example files are useful to create the proper configuration on your server (i.e.: create username and password in `nginx` and configure the enabled sites). 
 The following is the original README from the cited repo. Bear in mind that this image **does not** use Google Cloud Storage nor runs a `nginx` proxy.
@@ -26,8 +26,6 @@ Pull requests are welcome to fix any compatibility issues.
 # Quickstart
 
 ## Deploying to Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 This will provision an Heroku app, and a Postgres add-on for persisting metrics etc.
 Artifact store needs to be configured separately, see below.
