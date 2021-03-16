@@ -9,7 +9,6 @@ RUN set -x \
     && pip3 install wheel \
     && python3 -m pip install --upgrade pip \
     && pip3 install -r requirements.txt 
-#    && apt-get remove --purge --auto-remove -y ca-certificates && rm -rf /var/lib/apt/lists/*
 
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
@@ -19,6 +18,3 @@ COPY ./entry-point.sh /app/entry-point.sh
 COPY ./mlflow.sh /app/mlflow.sh
 
 CMD ["/bin/bash", "/app/entry-point.sh"]
-#CMD ["/bin/bash", "/app/mlflow.sh"]
-#CMD ["mlflow", "server", "--host", "0.0.0.0", "--static-prefix", "/mlflow"]
-#EXPOSE 8110
