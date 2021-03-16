@@ -1,6 +1,10 @@
 
 # mlflow with basic auth
 
+## **This repo is heavily based on [this](https://github.com/soundsensing/mlflow-easyauth) repo.**
+
+The main difference is that this Docker image does not includes a `nginx` container, because it is assumed that `nginx` is running on the host machine. Still the example files are useful to create the proper configuration on your server (i.e.: create username and password in `nginx` and configure the enabled sites). 
+
 Standard [mlflow](https://mlflow.org/) does not have any authentication
 for the web-interface.
 This project adds basic HTTP authentication with a single username, password to the web interface.
